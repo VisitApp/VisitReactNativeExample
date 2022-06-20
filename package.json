@@ -10,9 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "Visit-ReactNative": "https://github.com/VisitApp/Visit-ReactNative",
     "react": "17.0.2",
     "react-native": "0.68.2",
-    "react-native-visit-health-rn": "https://github.com/yash-vardhan-mishra/react-native-visit-health-rn",
     "react-native-webview": "^11.22.2"
   },
   "devDependencies": {

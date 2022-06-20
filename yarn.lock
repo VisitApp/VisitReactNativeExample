@@ -1541,6 +1541,14 @@
     "@typescript-eslint/types" "5.28.0"
     eslint-visitor-keys "^3.3.0"
 
+"Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative":
+  version "0.1.0"
+  resolved "https://github.com/VisitApp/Visit-ReactNative#826d3e61d9871b5c50ec5e5cd339122303a79f2f"
+  dependencies:
+    axios "^0.27.2"
+    moment "^2.29.3"
+    react-native-webview "^11.22.2"
+
 abort-controller@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
@@ -5417,14 +5425,6 @@ react-native-gradle-plugin@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz#b61a9234ad2f61430937911003cddd7e15c72b45"
   integrity sha512-eIlgtsmDp1jLC24dRn43hB3kEcZVqx6DUQbR0N1ABXGnMEafm9I3V3dUUeD1vh+Dy5WqijSoEwLNUPLgu5zDMg==
-
-"react-native-visit-health-rn@https://github.com/yash-vardhan-mishra/react-native-visit-health-rn":
-  version "0.1.0"
-  resolved "https://github.com/yash-vardhan-mishra/react-native-visit-health-rn#b0220d2e5bc9f23a7b7a594f1f9f6194eb4565e9"
-  dependencies:
-    axios "^0.27.2"
-    moment "^2.29.3"
-    react-native-webview "^11.22.2"
 
 react-native-webview@^11.22.2:
   version "11.22.2"

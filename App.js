@@ -1,5 +1,5 @@
 import React from 'react';
-import VisitHealthView from 'react-native-visit-health-rn';
+import VisitHealthView from 'Visit-ReactNative';
 
 
 // ...
