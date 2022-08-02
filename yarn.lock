@@ -1542,8 +1542,8 @@
     eslint-visitor-keys "^3.3.0"
 
 "Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative":
-  version "0.1.0"
-  resolved "https://github.com/VisitApp/Visit-ReactNative#6e1565c141ddec511699ec02dd0729442d8f90b7"
+  version "0.1.1"
+  resolved "https://github.com/VisitApp/Visit-ReactNative#55d94ce2fbed04b7fc0e6ab426d0ff5db9c583ba"
   dependencies:
     axios "^0.27.2"
     moment "^2.29.3"
@@ -5430,6 +5430,14 @@ react-native-webview@^11.22.2:
   version "11.22.2"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.22.2.tgz#0a57893b637c2825c83395f22b686cc6ac88e465"
   integrity sha512-bkstn3Vkf3JMrSE2R8xgIzgWu0c2+HAdiYJTo3xWcXN+LIAZFnn198s1QHcOFO7bfPObP4nSnIqzeQTiYjZYDA==
+  dependencies:
+    escape-string-regexp "2.0.0"
+    invariant "2.2.4"
+
+react-native-webview@^11.23.0:
+  version "11.23.0"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.23.0.tgz#603a584236da2e993906e6a094f165dcac3a1fdb"
+  integrity sha512-mGrgsMnYcQONvQy59xpBn87sKqkCsSkqIDRo+c2Ov4ISYl1j90wFBs+qViVJRWdoNHVuoCAZ4nZkJ65mhDpHhA==
   dependencies:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
