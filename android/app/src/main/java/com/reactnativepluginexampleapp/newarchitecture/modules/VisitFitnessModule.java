@@ -84,6 +84,18 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
         }
     }
 
+    @ReactMethod
+    public void fetchDailyFitnessData(double timestamp, Promise promise) {
+        this.promise = promise;
+        googleFitUtil.getDailyFitnessJSONData((long) timestamp);
+    }
+
+    @ReactMethod
+    public void fetchHourlyFitnessData(double timestamp, Promise promise) {
+        this.promise = promise;
+        googleFitUtil.getHourlyFitnessJSONData((long) timestamp);
+    }
+
 
     private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
 
@@ -168,5 +180,16 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
     @Override
     public void closeVisitPWA() {
 
+    }
+
+    
+    @Override
+    public void setDailyFitnessDataJSON(String s) {
+        promise.resolve(s);
+    }
+
+    @Override
+    public void setHourlyFitnessDataJSON(String s) {
+        promise.resolve(s);
     }
 }

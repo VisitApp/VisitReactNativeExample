@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "Visit-ReactNative": "https://github.com/VisitApp/Visit-ReactNative",
+    "Visit-ReactNative": "https://github.com/VisitApp/Visit-ReactNative#feature/promises",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-webview": "^11.23.0"
