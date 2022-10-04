@@ -6,7 +6,6 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
-import com.reactnativepluginexampleapp.newarchitecture.modules.VisitFitnessModule;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,7 +19,7 @@ public class MyAppPackage implements ReactPackage {
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
 
-        modules.add(new VisitFitnessModule(reactContext));
+        modules.add(new com.fitnessappdemo.newarchitecture.modules.VisitFitnessModule(reactContext));
 
         return modules;
     }

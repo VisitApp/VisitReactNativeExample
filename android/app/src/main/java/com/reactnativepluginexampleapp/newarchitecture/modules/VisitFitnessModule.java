@@ -1,4 +1,4 @@
-package com.reactnativepluginexampleapp.newarchitecture.modules;
+package com.fitnessappdemo.newarchitecture.modules;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -57,8 +57,8 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
     }
 
     @ReactMethod
-    public void requestDailyFitnessData(Callback successCallback) {
-        this.successCallback = successCallback;
+    public void requestDailyFitnessData(Promise promise) {
+        this.promise = promise;
         googleFitUtil.fetchDataFromFit();
     }
 
@@ -94,6 +94,17 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
     public void fetchHourlyFitnessData(double timestamp, Promise promise) {
         this.promise = promise;
         googleFitUtil.getHourlyFitnessJSONData((long) timestamp);
+    }
+
+    @ReactMethod
+    public void checkGoogleFitPermission(Promise promise) {
+        this.promise = promise;
+        googleFitUtil.checkForGoogleFitConnection();
+    }
+
+    @ReactMethod
+    public void setCalorieFromWeb(double count) {
+        googleFitUtil.setCalorieFromWeb(count);
     }
 
 
@@ -152,10 +163,8 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
     }
 
     @Override
-    public void loadDailyFitnessData(long steps, long sleep) {
-        String finalString = "window.updateFitnessPermissions(true," + steps + "," + sleep + ")";
-        Log.d("mytag", "loadDailyFitnessData() called: finalString :" + finalString);
-        successCallback.invoke(finalString);
+    public void loadDailyFitnessData(long steps, long sleep, float calorie) {
+        promise.resolve("{numberOfSteps: " + steps + ", sleepTime: " + sleep + ", calories : " + calorie + "}");
     }
 
 
@@ -182,7 +191,6 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
 
     }
 
-    
     @Override
     public void setDailyFitnessDataJSON(String s) {
         promise.resolve(s);
@@ -191,5 +199,10 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
     @Override
     public void setHourlyFitnessDataJSON(String s) {
         promise.resolve(s);
+    }
+
+    @Override
+    public void setGoogleFitConnection(boolean b) {
+        promise.resolve(b);
     }
 }
