@@ -7,10 +7,12 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "bundle:analysis": "npx visualize-bundle"
+
   },
   "dependencies": {
-    "Visit-ReactNative": "https://github.com/VisitApp/Visit-ReactNative#feature/promises",
+    "Visit-ReactNative": "https://github.com/VisitApp/Visit-ReactNative#feature/pb-sdk",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-webview": "^11.23.0"
@@ -23,6 +25,7 @@
     "eslint": "^8.18.0",
     "jest": "^28.1.1",
     "metro-react-native-babel-preset": "^0.71.1",
+    "react-native-bundle-visualizer": "^3.1.1",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
