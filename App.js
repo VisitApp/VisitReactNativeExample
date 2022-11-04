@@ -54,7 +54,8 @@ export default function App() {
     token = {token}
     id = {id}
     phone = {phone}
-    // moduleName={moduleName}
+    moduleName={moduleName}
+    magicLink={"https://star-health.getvisitapp.xyz/?mluib7c=cJL64yx2"}
   />
   </SafeAreaView>
   
