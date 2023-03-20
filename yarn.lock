@@ -1575,9 +1575,9 @@
     "@typescript-eslint/types" "5.46.1"
     eslint-visitor-keys "^3.3.0"
 
-"Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative":
-  version "0.1.2"
-  resolved "https://github.com/VisitApp/Visit-ReactNative#13ce863d258cd0292a8fc9002c1a11244d42b1a7"
+"Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative#0.1.4":
+  version "0.1.4"
+  resolved "https://github.com/VisitApp/Visit-ReactNative#864853ffdf1b721c3647c5f292f4e41c77627f59"
   dependencies:
     axios "^0.27.2"
     moment "^2.29.3"
@@ -5482,15 +5482,14 @@ react-native-gradle-plugin@^0.0.6:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz#b61a9234ad2f61430937911003cddd7e15c72b45"
   integrity sha512-eIlgtsmDp1jLC24dRn43hB3kEcZVqx6DUQbR0N1ABXGnMEafm9I3V3dUUeD1vh+Dy5WqijSoEwLNUPLgu5zDMg==
 
-react-native-location-enabler@^4.1.1:
+react-native-location-enabler@^4.1.1, "react-native-location-enabler@https://github.com/sashko9807/react-native-location-enabler":
   version "4.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-location-enabler/-/react-native-location-enabler-4.1.1.tgz#f9ba84db4dbd7ed011e60b8bf6c481249bf92387"
-  integrity sha512-1gXJ+NzH5JKpaR23t1P8afEB7TKKfBkdXk2avhNUuTBlhBrqa2HrL4uDwYHoc4ZcwchsVC2P0Q7gP9L5Ot+KJw==
+  resolved "https://github.com/sashko9807/react-native-location-enabler#e18d7895e7f8aa807e5f9324316204c7ee66baec"
 
-react-native-webview@^11.22.2, react-native-webview@^11.23.0:
-  version "11.26.0"
-  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.26.0.tgz#e524992876fe4a79e69905f0fab8949b470e9f16"
-  integrity sha512-4T4CKRm8xlaQDz9h/bCMPGAvtkesrhkRWqCX9FDJEzBToaVUIsV0ZOqtC4w/JSnCtFKKYiaC1ReJtCGv+4mFeQ==
+react-native-webview@^11.22.2, react-native-webview@^11.26.1:
+  version "11.26.1"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.26.1.tgz#658c09ed5162dc170b361e48c2dd26c9712879da"
+  integrity sha512-hC7BkxOpf+z0UKhxFSFTPAM4shQzYmZHoELa6/8a/MspcjEP7ukYKpuSUTLDywQditT8yI9idfcKvfZDKQExGw==
   dependencies:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
