@@ -1575,7 +1575,7 @@
     "@typescript-eslint/types" "5.46.1"
     eslint-visitor-keys "^3.3.0"
 
-"Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative#0.1.4":
+"Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative":
   version "0.1.4"
   resolved "https://github.com/VisitApp/Visit-ReactNative#864853ffdf1b721c3647c5f292f4e41c77627f59"
   dependencies:
