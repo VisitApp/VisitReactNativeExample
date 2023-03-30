@@ -32,6 +32,7 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
 
     private Promise promise;
     private Callback successCallback;
+    boolean isLoggingEnabled;
 
     public VisitFitnessModule(@Nullable ReactApplicationContext reactContext) {
         super(reactContext);
@@ -43,9 +44,12 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
 
 
     @ReactMethod
-    public void initiateSDK() {
-        googleFitUtil = new GoogleFitUtil(reactContext.getCurrentActivity(), this, BuildConfig.FIREBASE_DEFAULT_CLIENT_ID);
-        Log.d(TAG, "default client id:" + BuildConfig.FIREBASE_DEFAULT_CLIENT_ID);
+    public void initiateSDK(boolean isLoggingEnabled) {
+        googleFitUtil = new GoogleFitUtil(reactContext.getCurrentActivity(), this, BuildConfig.FIREBASE_DEFAULT_CLIENT_ID,isLoggingEnabled);
+        this.isLoggingEnabled = isLoggingEnabled;
+        if (isLoggingEnabled) {
+            Log.d(TAG, "default client id:" + BuildConfig.FIREBASE_DEFAULT_CLIENT_ID);
+        }
         googleFitUtil.init();
     }
 
@@ -102,7 +106,9 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
         @Override
         public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
 
-            Log.d(TAG, "onActivityResult: requestCode:" + requestCode + ", resultCode:" + resultCode);
+            if (isLoggingEnabled) {
+                Log.d(TAG, "onActivityResult: requestCode:" + requestCode + ", resultCode:" + resultCode);
+            }
             if (promise != null) {
                 googleFitUtil.onActivityResult(requestCode, resultCode, intent);
             }
@@ -130,7 +136,9 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
 
     @Override
     public void loadGraphData(String s) {
-        Log.d("mytag", "loadGraphDataUrl: " + s);
+        if (isLoggingEnabled) {
+            Log.d("mytag", "loadGraphDataUrl: " + s);
+        }
         successCallback.invoke(s);
     }
 
@@ -154,15 +162,20 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
     @Override
     public void loadDailyFitnessData(long steps, long sleep) {
         String finalString = "window.updateFitnessPermissions(true," + steps + "," + sleep + ")";
-        Log.d("mytag", "loadDailyFitnessData() called: finalString :" + finalString);
+        if (isLoggingEnabled) {
+            Log.d("mytag", "loadDailyFitnessData() called: finalString :" + finalString);
+        }
         successCallback.invoke(finalString);
     }
 
 
     @Override
     public void syncDataWithServer(String baseUrl, String authToken, long googleFitLastSync, long gfHourlyLastSync) {
-        Log.d("mytag", "GoogleFitPermissionModule syncDataWithServer(): baseUrl: " + baseUrl + " authToken: " + authToken +
-                " googleFitLastSync: " + googleFitLastSync + "  gfHourlyLastSync:" + gfHourlyLastSync);
+        if (isLoggingEnabled) {
+            Log.d("mytag", "GoogleFitPermissionModule syncDataWithServer(): baseUrl: " + baseUrl + " authToken: " + authToken +
+                    " googleFitLastSync: " + googleFitLastSync + "  gfHourlyLastSync:" + gfHourlyLastSync);
+
+        }
 
         googleFitUtil.sendDataToServer(
                 baseUrl + "/",
@@ -182,7 +195,7 @@ public class VisitFitnessModule extends ReactContextBaseJavaModule implements Go
 
     }
 
-    
+
     @Override
     public void setDailyFitnessDataJSON(String s) {
         promise.resolve(s);
