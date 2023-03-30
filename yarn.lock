@@ -1576,8 +1576,8 @@
     eslint-visitor-keys "^3.3.0"
 
 "Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative":
-  version "0.1.6"
-  resolved "https://github.com/VisitApp/Visit-ReactNative#8cf074e77d9fd3f7dea374cf524e3de712a16689"
+  version "0.1.9"
+  resolved "https://github.com/VisitApp/Visit-ReactNative#c01418036e4b7064fedb094ed2a74008ec8db08a"
   dependencies:
     axios "^0.27.2"
     moment "^2.29.3"

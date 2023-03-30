@@ -56,6 +56,7 @@ export default function App() {
     phone = {phone}
     moduleName={moduleName}
     magicLink={"https://star-health.getvisitapp.xyz/?mluib7c=cJL64yx2"}
+    isLoggingEnabled={false}
   />
   </SafeAreaView>
   
