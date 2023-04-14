@@ -1576,11 +1576,12 @@
     eslint-visitor-keys "^3.3.0"
 
 "Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative":
-  version "0.1.9"
-  resolved "https://github.com/VisitApp/Visit-ReactNative#c01418036e4b7064fedb094ed2a74008ec8db08a"
+  version "0.2.4"
+  resolved "https://github.com/VisitApp/Visit-ReactNative#08494ec4c0b1082bf679904507672d6846cfcfd9"
   dependencies:
     axios "^0.27.2"
     moment "^2.29.3"
+    react-native-device-info "^10.6.0"
     react-native-location-enabler "^4.1.1"
     react-native-webview "^11.22.2"
 
@@ -5476,6 +5477,11 @@ react-native-codegen@^0.0.17:
     flow-parser "^0.121.0"
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
+
+react-native-device-info@^10.6.0:
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-10.6.0.tgz#51f1b2ec98abc32747149b0a5b7fb662b44d50e4"
+  integrity sha512-/MmINdojWdw2/9rwYpH/dX+1gFP0o78p8yYPjwxiPhoySSL2rZaNi+Mq9VwC+zFi/yQmJUvHntkKSw2KUc7rFw==
 
 react-native-gradle-plugin@^0.0.6:
   version "0.0.6"

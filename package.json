@@ -13,6 +13,7 @@
     "Visit-ReactNative": "https://github.com/VisitApp/Visit-ReactNative",
     "react": "17.0.2",
     "react-native": "0.68.2",
+    "react-native-device-info": "^10.6.0",
     "react-native-location-enabler": "https://github.com/sashko9807/react-native-location-enabler",
     "react-native-webview": "^11.26.1"
   },
