@@ -1575,9 +1575,9 @@
     "@typescript-eslint/types" "5.46.1"
     eslint-visitor-keys "^3.3.0"
 
-"Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative#vapt-magiclink":
-  version "0.2.5"
-  resolved "https://github.com/VisitApp/Visit-ReactNative#0393c9d98b10cf89508cab63ccddbcf149f5f324"
+"Visit-ReactNative@https://github.com/VisitApp/Visit-ReactNative":
+  version "0.2.11"
+  resolved "https://github.com/VisitApp/Visit-ReactNative#cfc7024752a84b231d932036ccf8c117df398792"
   dependencies:
     axios "^0.27.2"
     moment "^2.29.3"

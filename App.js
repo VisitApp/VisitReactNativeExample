@@ -27,7 +27,8 @@ const token =
 const id = '12575887';
 
 const phone = '6379220732';
-const moduleName = null;
+const moduleName = 'pharmacy';
+const magicLink = 'https://star-health.getvisitapp.xyz/?mluib7c=BXQqShdC';
 
 export default function App() {
   return (
@@ -52,12 +53,13 @@ export default function App() {
     /> */}
 
       <VisitHealthView
-        baseUrl={visitBaseUrl}
-        token={token}
-        id={id}
-        phone={phone}
-        moduleName={moduleName}
-        isLoggingEnabled={false}
+        // baseUrl={visitBaseUrl}
+        // token={token}
+        // id={id}
+        // phone={phone}
+        // moduleName={moduleName}
+        isLoggingEnabled={true}
+        magicLink={magicLink}
       />
     </SafeAreaView>
   );
