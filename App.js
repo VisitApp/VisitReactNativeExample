@@ -73,7 +73,7 @@ export default class App extends Component {
     /> */}
 
         <VisitHealthView
-          magicLinkBaseUrl={visitBaseUrl}
+          baseUrl={visitBaseUrl}
           errorBaseUrl={'https://star-health.getvisitapp.xyz/'}
           token={token}
           id={id}
